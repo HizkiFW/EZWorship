@@ -97,8 +97,21 @@ namespace EZWorship {
 
 		private void ListBox_DrawItem(object sender, DrawItemEventArgs e) {
 			e.DrawBackground();
-			if(e.Index >= 0)
-				e.Graphics.DrawString(((ListBox)sender).Items[e.Index].ToString(), e.Font, new SolidBrush(e.ForeColor), e.Bounds);
+			if(e.Index >= 0) {
+				String text = ((ListBox)sender).Items[e.Index].ToString();
+
+				if(text.Trim().StartsWith("[")) {
+					String[] textArray = text.Split('\n');
+
+					e.Graphics.FillRectangle(new SolidBrush(Color.DarkBlue), new Rectangle(e.Bounds.X, e.Bounds.Y, e.Bounds.Width, e.Font.Height));
+
+
+					e.Graphics.DrawString(textArray[0].Trim(), new Font(e.Font, FontStyle.Bold), new SolidBrush(Color.White), e.Bounds);
+					e.Graphics.DrawString(text.Substring(textArray[0].Length).Trim(), e.Font, new SolidBrush(e.ForeColor), new PointF(e.Bounds.X, e.Bounds.Y + e.Font.Height));
+				} else {
+					e.Graphics.DrawString(text, e.Font, new SolidBrush(e.ForeColor), e.Bounds);
+				}
+			}
 		}
 
 		private void btnGoLive_Click(object sender, EventArgs e) {
