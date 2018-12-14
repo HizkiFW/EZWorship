@@ -4,11 +4,11 @@ using System.IO;
 using System.Windows.Forms;
 
 namespace EZWorship {
-	public partial class Form1 : Form {
+	public partial class MainForm : Form {
 
 		private string outputFile = "D:/EZWorship.txt";
 
-		public Form1() {
+		public MainForm() {
 			InitializeComponent();
 		}
 
@@ -60,7 +60,6 @@ namespace EZWorship {
 				MessageBox.Show("Please select an output directory!");
 				SelectOutput();
 			}
-			//listPreview.Items.Add("test\nmultiline\nitem");
 		}
 
 		private void exitToolStripMenuItem_Click(object sender, EventArgs e) {

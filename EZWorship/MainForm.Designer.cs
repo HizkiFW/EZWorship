@@ -1,5 +1,5 @@
 ﻿namespace EZWorship {
-	partial class Form1 {
+	partial class MainForm {
 		/// <summary>
 		/// Required designer variable.
 		/// </summary>
@@ -23,7 +23,7 @@
 		/// the contents of this method with the code editor.
 		/// </summary>
 		private void InitializeComponent() {
-			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+			System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
 			this.statusStrip1 = new System.Windows.Forms.StatusStrip();
 			this.labelStatus = new System.Windows.Forms.ToolStripStatusLabel();
 			this.toolStrip1 = new System.Windows.Forms.ToolStrip();
