@@ -25,7 +25,7 @@ namespace EZWorship {
 
 		private void connect() {
 			try {
-				Int32 port = 65432;
+				Int32 port = Int32.Parse(textBox3.Text);
 				client = new TcpClient(textBox1.Text, port);
 				stream = client.GetStream();
 			} catch(Exception ex) {
@@ -69,13 +69,17 @@ namespace EZWorship {
 			sendMessage("MessageQueue GLITCH");
 		}
 
+		private void button9_Click(object sender, EventArgs e) {
+			sendMessage("MessageQueue ULTRAGLITCH");
+		}
+
 		private void trackBar2_Scroll(object sender, EventArgs e) {
 			sendMessage("MessageQueue FONT_SIZE " + trackBar2.Value.ToString());
 		}
 
 		private void button4_Click(object sender, EventArgs e) {
-			trackBar2.Value = 75;
-			sendMessage("MessageQueue FONT_SIZE 75");
+			trackBar2.Value = 70;
+			sendMessage("MessageQueue FONT_SIZE 70");
 		}
 
 		private void button8_Click(object sender, EventArgs e) {

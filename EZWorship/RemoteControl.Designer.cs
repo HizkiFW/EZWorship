@@ -45,6 +45,8 @@
 			this.button4 = new System.Windows.Forms.Button();
 			this.timer1 = new System.Windows.Forms.Timer(this.components);
 			this.button8 = new System.Windows.Forms.Button();
+			this.textBox3 = new System.Windows.Forms.TextBox();
+			this.button9 = new System.Windows.Forms.Button();
 			((System.ComponentModel.ISupportInitialize)(this.trackBar1)).BeginInit();
 			((System.ComponentModel.ISupportInitialize)(this.trackBar2)).BeginInit();
 			this.groupBox1.SuspendLayout();
@@ -73,7 +75,7 @@
 			// 
 			this.textBox1.Location = new System.Drawing.Point(93, 12);
 			this.textBox1.Name = "textBox1";
-			this.textBox1.Size = new System.Drawing.Size(224, 20);
+			this.textBox1.Size = new System.Drawing.Size(170, 20);
 			this.textBox1.TabIndex = 2;
 			this.textBox1.Text = "127.0.0.1";
 			// 
@@ -110,15 +112,15 @@
 			// 
 			this.button3.Location = new System.Drawing.Point(12, 123);
 			this.button3.Name = "button3";
-			this.button3.Size = new System.Drawing.Size(102, 68);
+			this.button3.Size = new System.Drawing.Size(102, 34);
 			this.button3.TabIndex = 6;
-			this.button3.Text = "Glitch";
+			this.button3.Text = "Normal Glitch";
 			this.button3.UseVisualStyleBackColor = true;
 			this.button3.Click += new System.EventHandler(this.button3_Click);
 			// 
 			// trackBar2
 			// 
-			this.trackBar2.LargeChange = 50;
+			this.trackBar2.LargeChange = 25;
 			this.trackBar2.Location = new System.Drawing.Point(117, 139);
 			this.trackBar2.Maximum = 150;
 			this.trackBar2.Minimum = 50;
@@ -126,7 +128,7 @@
 			this.trackBar2.Size = new System.Drawing.Size(310, 45);
 			this.trackBar2.SmallChange = 25;
 			this.trackBar2.TabIndex = 7;
-			this.trackBar2.Value = 75;
+			this.trackBar2.Value = 70;
 			this.trackBar2.Scroll += new System.EventHandler(this.trackBar2_Scroll);
 			// 
 			// label3
@@ -250,11 +252,31 @@
 			this.button8.UseVisualStyleBackColor = true;
 			this.button8.Click += new System.EventHandler(this.button8_Click);
 			// 
+			// textBox3
+			// 
+			this.textBox3.Location = new System.Drawing.Point(269, 12);
+			this.textBox3.Name = "textBox3";
+			this.textBox3.Size = new System.Drawing.Size(48, 20);
+			this.textBox3.TabIndex = 12;
+			this.textBox3.Text = "65432";
+			// 
+			// button9
+			// 
+			this.button9.Location = new System.Drawing.Point(12, 157);
+			this.button9.Name = "button9";
+			this.button9.Size = new System.Drawing.Size(102, 34);
+			this.button9.TabIndex = 13;
+			this.button9.Text = "ULTRA GLITCH";
+			this.button9.UseVisualStyleBackColor = true;
+			this.button9.Click += new System.EventHandler(this.button9_Click);
+			// 
 			// RemoteControl
 			// 
 			this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
 			this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
 			this.ClientSize = new System.Drawing.Size(442, 450);
+			this.Controls.Add(this.button9);
+			this.Controls.Add(this.textBox3);
 			this.Controls.Add(this.button8);
 			this.Controls.Add(this.button4);
 			this.Controls.Add(this.groupBox1);
@@ -301,5 +323,7 @@
 		private System.Windows.Forms.CheckBox checkBox1;
 		private System.Windows.Forms.Button button8;
 		private System.Windows.Forms.CheckBox checkBox2;
+		private System.Windows.Forms.TextBox textBox3;
+		private System.Windows.Forms.Button button9;
 	}
 }
